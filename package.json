@@ -1,0 +1,23 @@
+{
+  "name": "passport-oneid",
+  "version": "0.0.1",
+  "description": "oneID Authentication Strategy for Passport.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "passport",
+    "oneid",
+    "passport",
+    "authentication",
+    "auth"
+  ],
+  "author": "Jeff Hunken",
+  "license": "ISC",
+  "dependencies": {
+    "oneid": "^0.4.4",
+    "passport": "^0.2.2",
+    "pkginfo": "^0.3.0"
+  }
+}
