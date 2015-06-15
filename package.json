@@ -13,7 +13,8 @@
     "authentication",
     "auth"
   ],
-  "author": "Jeff Hunken",
+  "auth": "Jeff Hunken",
+  "email": "jhunken@gmail.com",
   "license": "ISC",
   "dependencies": {
     "oneid": "^0.4.4",
