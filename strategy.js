@@ -21,13 +21,14 @@ function Strategy(options, verify) {
   if (!verify) throw new Error('oneID authentication strategy requires a verify function');
   if (!options.apiID || !options.apiKey) throw new Error('Missing Keychain API Credentials. Please register at https://keychain.oneid.com/register');
 
+
   passport.Strategy.call(this);
   this.name               = 'oneid';
   this._verify            = verify;
   this._passReqToCallback = options.passReqToCallback;
 
   if (!oneIDClient) {
-    oneIDClient = oneid.getClient(options.apiKey, options.apiID);
+    oneIDClient = oneid.getClient(options.apiKey, options.apiID, options.server || '');
   }
 }
 
@@ -73,7 +74,7 @@ Strategy.prototype.authenticate = function (req, options) {
       }
     }
     else {
-      self.fail();
+      self.fail(oneid_res);
     }
   });
 };
